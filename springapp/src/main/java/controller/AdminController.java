@@ -18,8 +18,8 @@ import model.Sample;
 public class AdminController {
     @Autowired
     IDonor donor;
- @Autowired
- ISample sample;
+    @Autowired
+    ISample sample;
  @GetMapping("/")
 public String welcome() {
 return "welcome to Blood Bank Application";

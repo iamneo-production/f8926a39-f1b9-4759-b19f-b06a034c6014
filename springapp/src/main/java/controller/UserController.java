@@ -1,5 +1,4 @@
 package controller;
-
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +15,7 @@ import model.User;
 
 @RestController
 public class UserController {
+
 	@Autowired
 	IUser user;
 	@Autowired
@@ -53,9 +53,9 @@ else {
 	public List<Sample> getAllSample() {
 		return sample.findAll();
 	}
-
+    @GetMapping("/donor/{did}")
 	public Donor getAllDonorById(@PathVariable("did") int did) {
-		Donor s1 = donor.findDonorByID(did);
+		Donor s1=donor.findDonorByID(did);
 		return s1;
 	}
 
