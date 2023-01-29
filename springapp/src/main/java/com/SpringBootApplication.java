@@ -4,14 +4,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-@SpringBootApplication
-@EnableJpaRepositories("dao")
+ @SpringBootApplication
+ @EnableJpaRepositories("dao")
 @ComponentScan("controller")
-@EntityScan("model")
-public class BloodBankApplication {
-
+ @EntityScan("model")
+public class SpringBootApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(BloodBankApplication.class, args);
+		SpringApplication.run(SpringBootApplication.class, args);
 	}
 
 }
